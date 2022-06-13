@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(70, 226, 247);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+h2 {
+    color: rgb(255, 94, 0);
+    margin: 90px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    color: rgb(0, 0, 0);
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.area {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+}
+.area .item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.item.t {
+    border-top: 1px solid #FFF;
+}
+.item.l {
+    border-left: 1px solid #FFF;
+}
+.item.r {
+    border-right: 1px solid #FFF;
+}
+.item.b {
+    border-bottom: 1px solid #FFF;
+}
+
+.info {
+    width: 300px;
+    display: flex;
+    margin-top: 30px;
+    border: 1px dotted rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+.infoitem {
+    flex: 1;
+}
+.infotitle {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+.infobody {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.reset {
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.back {
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body{
+  font-family: 'Nunito', sans-serif;
+}
+
+.a{color: #E7484F}
+.b{color: #F68B1D}
+.c{color: #FCED00}
+.d{color: #009E4F}
+.e{color: #00AAC3}
+.f{color:  #732982}
+
+.container{
+  margin-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rainbow{
+  background-color: #000000;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.rainbow-1:hover{
+   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+}
+
+.rainbow-2:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+
+@font-face {
+	font-family: "Gingham Variable";
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Gingham.woff2")
+			format("woff2"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Gingham.woff")
+			format("woff");
+	font-weight: 300 700;
+	font-stretch: 1% 150%;
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	margin: 0;
+	width: 100%;
+	font-size: 8vw;
+	font-family: "Gingham Variable", BlinkMacSystemFont, sans-serif;
+	font-weight: 700;
+	font-stretch: 150%;
+	
+	color: #FF8C00;
+	white-space: nowrap;
+	text-align: center;
+	transition: font-weight 250ms ease-out, font-stretch 250ms ease-out;
+	text-shadow: -1px -1px 0 #6E1F58, 1px -1px 0 #6E1F58, -1px 1px 0 #6E1F58,
+		1px 1px 0 #6E1F58, 1px 0px 0px #FF0080, 0px 1px 0px #FF0080, 2px 1px 0px #FF0080,
+		1px 2px 0px #FF0080, 3px 2px 0px #FF0080, 2px 3px 0px #FF0080, 4px 3px 0px #FF0080,
+		3px 4px 0px #FF0080, 5px 4px 0px #FF0080, 3px 5px 0px #6E1F58,
+		6px 5px 0px #6E1F58, -1px 2px 0 black, 0 3px 0 #6E1F58, 1px 4px 0 #6E1F58,
+		2px 5px 0px #6E1F58, 2px -1px 0 #6E1F58, 3px 0 0 #6E1F58, 4px 1px 0 #6E1F58,
+		5px 2px 0px #6E1F58, 6px 3px 0 #6E1F58, 7px 4px 0 #6E1F58;
+}
+

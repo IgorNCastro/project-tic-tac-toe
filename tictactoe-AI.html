@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h3>You are "X", the AI is "O"</h3>
+    <h3>Click in the area to play</h3>
+
+    <div class="area">
+        <div data-item="a1" class="item b r"></div>
+        <div data-item="a2" class="item b r"></div>
+        <div data-item="a3" class="item b"></div>
+
+        <div data-item="b1" class="item b r"></div>
+        <div data-item="b2" class="item b r"></div>
+        <div data-item="b3" class="item b"></div>
+
+        <div data-item="c1" class="item r"></div>
+        <div data-item="c2" class="item r"></div>
+        <div data-item="c3" class="item"></div>
+    </div>
+
+    <div class="info">
+        <div class="infoitem">
+            <div class="infotitle">Turn:</div>
+            <div class="infobody turn">--</div>
+        </div>
+        <div class="infoitem">
+            <div class="infotitle">Result:</div>
+            <div class="infobody result">--</div>
+        </div>
+    </div>
+
+    <button class="reset">Restart</button>
+
+    <div>
+        <a href="index.html">
+            <button class="back">Back</button>
+        </a>
+    </div>
+
+    <script src="scriptAI.js"></script>
+</body>
+</html>
