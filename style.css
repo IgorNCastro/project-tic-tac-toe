@@ -6,30 +6,100 @@
 
 body {
     display: flex;
-    min-height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(70, 226, 247);
-    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    font-family: "Archivo Black", sans-serif;
+    background: #f4d03f;
+    height: 100vh;
+    color: #000;
+}
+  
+.words {
+    color: #f4d03f;
+    font-size: 0;
+    line-height: 1.5;
+}
+  
+.words span {
+    font-size: 5rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+}
+  
+@keyframes move {
+    0% {
+      transform: translate(-30%, 0);
+    }
+    50% {
+      text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+      transform: translate(30%, 0);
+    }
+}
+  
+.words span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+  
+.words span:nth-child(3) {
+    animation-delay: 1s;
+}
+  
+.words span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+  
+.words span:nth-child(5) {
+    animation-delay: 2s;
+}
+  
+.words span:nth-child(6) {
+    animation-delay: 2.5s;
+}
+  
+.words span:nth-child(7) {
+    animation-delay: 3s;
 }
 
-h2 {
-    color: rgb(255, 94, 0);
-    margin: 90px 0;
-    justify-content: center;
+.button-enter {
+    outline: 0;
+    grid-gap: 8px;
     align-items: center;
+    background: 0 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    gap: 8px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all .14s ease-out;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    margin: 30px;
 }
+
+.button-enter:hover {
+    box-shadow: 4px 4px 0 #000;
+    transform: translate(-4px,-4px);   
+}
+
+.button-enter:focus-visible{
+    outline-offset: 1px;
+}
+
 
 h3 {
-    color: rgb(0, 0, 0);
-    margin: 20px 0;
-    justify-content: center;
-    align-items: center;
-}
-
-h4 {
     color: rgb(0, 0, 0);
     margin: 20px 0;
     justify-content: center;
@@ -58,16 +128,16 @@ h4 {
 }
 
 .item.t {
-    border-top: 1px solid #FFF;
+    border-top: 1px solid rgb(0, 0, 0);
 }
 .item.l {
-    border-left: 1px solid #FFF;
+    border-left: 1px solid rgb(0, 0, 0);
 }
 .item.r {
-    border-right: 1px solid #FFF;
+    border-right: 1px solid rgb(0, 0, 0);
 }
 .item.b {
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .info {
@@ -108,19 +178,6 @@ h4 {
     margin-top: 20px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
-
-body{
-  font-family: 'Nunito', sans-serif;
-}
-
-.a{color: #E7484F}
-.b{color: #F68B1D}
-.c{color: #FCED00}
-.d{color: #009E4F}
-.e{color: #00AAC3}
-.f{color:  #732982}
-
 .container{
   margin-top: 10px;
 }
@@ -128,78 +185,3 @@ body{
 .text-center {
   text-align: center;
 }
-
-.rainbow{
-  background-color: #000000;
-  border-radius: 4px;  
-  color: #fff;
-  cursor: pointer;
-  padding: 8px 16px;
-}
-
-.rainbow-1:hover{
-   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-   animation:slidebg 5s linear infinite;
-}
-
-.rainbow-2:hover{
-   background-image:     linear-gradient(
-      to right, 
-      #E7484F,
-      #E7484F 16.65%,
-      #F68B1D 16.65%,
-      #F68B1D 33.3%,
-      #FCED00 33.3%,
-      #FCED00 49.95%,
-      #009E4F 49.95%,
-      #009E4F 66.6%,
-      #00AAC3 66.6%,
-      #00AAC3 83.25%,
-      #732982 83.25%,
-      #732982 100%,
-      #E7484F 100%
-    );
-  animation:slidebg 2s linear infinite;
-}
-
-@keyframes slidebg {
-  to {
-    background-position:20vw;
-  }
-}
-
-
-@font-face {
-	font-family: "Gingham Variable";
-	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Gingham.woff2")
-			format("woff2"),
-		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Gingham.woff")
-			format("woff");
-	font-weight: 300 700;
-	font-stretch: 1% 150%;
-}
-
-h1 {
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-	margin: 0;
-	width: 100%;
-	font-size: 8vw;
-	font-family: "Gingham Variable", BlinkMacSystemFont, sans-serif;
-	font-weight: 700;
-	font-stretch: 150%;
-	
-	color: #FF8C00;
-	white-space: nowrap;
-	text-align: center;
-	transition: font-weight 250ms ease-out, font-stretch 250ms ease-out;
-	text-shadow: -1px -1px 0 #6E1F58, 1px -1px 0 #6E1F58, -1px 1px 0 #6E1F58,
-		1px 1px 0 #6E1F58, 1px 0px 0px #FF0080, 0px 1px 0px #FF0080, 2px 1px 0px #FF0080,
-		1px 2px 0px #FF0080, 3px 2px 0px #FF0080, 2px 3px 0px #FF0080, 4px 3px 0px #FF0080,
-		3px 4px 0px #FF0080, 5px 4px 0px #FF0080, 3px 5px 0px #6E1F58,
-		6px 5px 0px #6E1F58, -1px 2px 0 black, 0 3px 0 #6E1F58, 1px 4px 0 #6E1F58,
-		2px 5px 0px #6E1F58, 2px -1px 0 #6E1F58, 3px 0 0 #6E1F58, 4px 1px 0 #6E1F58,
-		5px 2px 0px #6E1F58, 6px 3px 0 #6E1F58, 7px 4px 0 #6E1F58;
-}
-
